@@ -1,8 +1,9 @@
 # 🏆 Desafio: Classificador de Nível de Herói
-
  
-![Demo do Projeto](images/demo.gif)
-
+<div align="center">
+  <img src="images/demo.gif" alt="Demo do Projeto" />
+</div>
+<br>
 Este projeto foi desenvolvido como parte do desafio "Classificador de Nível de Herói" do bootcamp **Ri Happy - Front-end do Zero #2** da [Digital Innovation One (DIO)](https://dio.me/). 
 
 A proposta inicial era criar um script simples para classificar heróis com base em sua experiência (XP). No entanto, decidi evoluir o projeto para uma **aplicação web completa e interativa**, aplicando conceitos avançados de front-end para criar uma experiência de usuário rica, moderna e funcional.
