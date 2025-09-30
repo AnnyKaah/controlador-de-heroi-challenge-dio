@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Classificador de Nível de Herói - Avançado</title>
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Elemento para a notificação Toast -->
+  <div id="toast-notification"></div>
+
+  <div class="container">
+    <h2>Classificador de Nível de Herói</h2>
+
+    <div id="msgErro"></div>
+
+    <div class="input-wrapper">
+      <i class="fa-solid fa-user input-icon"></i>
+      <input type="text" id="nome" placeholder=" " />
+      <label for="nome">Nome do Herói:</label>
+    </div>
+    <div class="input-wrapper">
+      <i class="fa-solid fa-star input-icon"></i>
+      <input type="number" id="xp" placeholder=" " min="0" />
+      <label for="xp">Quantidade de XP:</label>
+    </div>
+    <button id="btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar Herói</button>
+    <button id="btnLimpar"><i class="fa-solid fa-trash-can"></i> Limpar Lista</button>
+
+    <div class="main-content">
+      <table id="listaHerois" class="hidden">
+        <thead>
+          <tr>
+            <th data-sort="nome">Nome do Herói <i class="sort-icon fa-solid fa-sort"></i></th>
+            <th data-sort="xp">XP <i class="sort-icon fa-solid fa-sort"></i></th>
+            <th>Nível</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+  
+      <!-- Seção de Informações de Nível -->
+      <div class="level-info">
+        <h3>Guia de Níveis por XP</h3>
+        <ul>
+          <li><strong>Ferro:</strong> Menos de 1.000</li>
+          <li><strong>Bronze:</strong> 1.001 a 2.000</li>
+          <li><strong>Prata:</strong> 2.001 a 5.000</li>
+          <li><strong>Ouro:</strong> 5.001 a 7.000</li>
+          <li><strong>Platina:</strong> 7.001 a 8.000</li>
+          <li><strong>Ascendente:</strong> 8.001 a 9.000</li>
+          <li><strong>Imortal:</strong> 9.001 a 10.000</li>
+          <li><strong>Radiante:</strong> 10.001 ou mais</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Confirmação -->
+  <div id="confirm-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h4>Confirmar Ação</h4>
+      <p>Você tem certeza que deseja limpar toda a lista de heróis? Esta ação não pode ser desfeita.</p>
+      <div class="modal-actions">
+        <button id="modal-btn-cancel">Cancelar</button>
+        <button id="modal-btn-confirm">Confirmar</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Link para o arquivo JavaScript externo -->
+  <script src="script.js"></script>
+
+</body>
+</html>
